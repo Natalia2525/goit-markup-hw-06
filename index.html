@@ -54,7 +54,7 @@
       <div class="container">
         <h1 class="hero" >Эффективные решения <br>
           для вашего бизнеса</h1>
-              <button type="button" class="button">Заказать услугу
+              <button type="button" class="button" data-open-modal>Заказать услугу
           </button>
                 </div>
         </section>
@@ -375,8 +375,17 @@
       </ul> 
       </div>
     </section>
-
     </main>
+
+    <div class="backdrop is-hidden" data-backdrop>
+      <div class="modal">
+        <form action="" class="modal-form">
+          <b class="modal-title"> Оставьте свои данные, мы вам перезвоним
+
+        </form>
+        <button data-close-modal>Закрыть</button>
+      </div>
+    </div>
 
     <!-- Футер -->
     <footer class="footer">
@@ -438,18 +447,42 @@
             </li>
           </ul>
         </div>
-        <div>
-          <b class="subtitle">Подпишитесь на рассылку</b> <br>
-          <input class="input-mail" type="text">
-          <button type="button" class="button-title button">Подписаться
-            <svg  width="24" height="24"  >
+            <div class="">
+              <b class="subtitle"> Подпишитесь на рассылку
+              <form class="send-email">
+          <input class="email" type="email" name="mail" placeholder="E-mail"/>
+          <button type="submit" class="button-title button">Подписаться
+            <svg  width="24" height="24">
               <use href="./images/sprite.svg#icon-send">
               </use>
             </svg>
           </button>
-        </div>
+        </form>
+            </div>
       </div>
     </footer>
+
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+
+      refs.backdrop.addEventListener("click", logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle("is-hidden");
+      }
+
+      function logBackdropClick() {
+        console.log("Это клик в бекдроп");
+      }
+    </script>
+
   </body>
 </html>
 
