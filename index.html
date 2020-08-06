@@ -378,14 +378,45 @@
     </main>
 
     <div class="backdrop is-hidden" data-backdrop>
-      <div class="modal">
-        <form action="" class="modal-form">
-          <b class="modal-title"> Оставьте свои данные, мы вам перезвоним
 
+        <form action="" class="modal-form">
+        <h2 class="modal-title"> Оставьте свои данные, мы вам перезвоним </h2>
+        
+          <div class="modal-form-wrapper">
+            <input type="text" name="name" id="name" class="form-input">
+            <label for="name" class="modal-form-label">Имя</label>
+          </div>
+
+          <div class="modal-form-wrapper">
+            <input type="tel" name="telefon" id="telefon" class="form-input">
+            <label for="telefon" class="modal-form-label">Телефон</label>
+          </div>
+          
+          <div class="modal-form-wrapper">
+            <input type="email" name="form-mail" id="form-mail" class="form-input">
+            <label for="form-mail" class="modal-form-label">Почта</label>
+          </div>
+
+          <div class="modal-form-textarea-wrapper">
+            <textarea name="coment" id="textarea-coment"
+            class="textarea-coment">
+          </textarea>
+          <label for="textarea-coment" class="modal-form-label">Комментарий</label>
+          </div>
+          
+          <label class="modal-form-checkbox-label">
+            <input type="checkbox" name="form-chekbox"  value="agreement-conditions">
+            <span>Соглашаюсь с рассылкой и принимаю 
+              <a href="">Условия договора</a> 
+            </span>
+          </label>
+                  
+        <button type="submit" class="form-submit-button button">Отправить</button>
+        <button data-close-modal class="form-close-button">Закрыть</button>
         </form>
-        <button data-close-modal>Закрыть</button>
+        
       </div>
-    </div>
+  
 
     <!-- Футер -->
     <footer class="footer">
