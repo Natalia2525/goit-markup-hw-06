@@ -383,8 +383,14 @@
         <h2 class="modal-title"> Оставьте свои данные, мы вам перезвоним </h2>
         
           <div class="modal-form-wrapper">
-            <input type="text" name="name" id="name" class="form-input">
-            <label for="name" class="modal-form-label">Имя</label>
+            <input type="text" name="name" id="name" class="form-input" >
+              <label for="name" class="modal-form-label">
+              <svg class="icon-person-black" width="18" height="18">
+                <use href="./images/sprite.svg#person-black">
+                </use>
+              </svg>
+              <span class="modal-form-label-span">Имя</span> 
+            </label>
           </div>
 
           <div class="modal-form-wrapper">
@@ -401,18 +407,23 @@
             <textarea name="coment" id="textarea-coment"
             class="textarea-coment">
           </textarea>
-          <label for="textarea-coment" class="modal-form-label">Комментарий</label>
+          <label for="textarea-coment" class="modal-form-textarea-label">Комментарий</label>
           </div>
           
           <label class="modal-form-checkbox-label">
-            <input type="checkbox" name="form-chekbox"  value="agreement-conditions">
+            <input type="checkbox" name="form-chekbox" value="agreement-conditions">
             <span>Соглашаюсь с рассылкой и принимаю 
               <a href="">Условия договора</a> 
             </span>
           </label>
                   
         <button type="submit" class="form-submit-button button">Отправить</button>
-        <button data-close-modal class="form-close-button">Закрыть</button>
+        <button data-close-modal class="form-close-button">
+          <svg class="icon-close" width="18" height="18">
+            <use href="./images/sprite.svg#close-black">
+            </use>
+          </svg>
+        </button>
         </form>
         
       </div>
@@ -482,8 +493,9 @@
               <b class="subtitle"> Подпишитесь на рассылку
               <form class="send-email">
           <input class="email" type="email" name="mail" placeholder="E-mail"/>
-          <button type="submit" class="button-title button">Подписаться
-            <svg  width="24" height="24">
+          <button type="submit" class="button-title button">
+            <span>Подписаться</span> 
+            <svg  width="24" height="24" class="send-email-svg">
               <use href="./images/sprite.svg#icon-send">
               </use>
             </svg>
