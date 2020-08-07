@@ -379,46 +379,53 @@
 
     <div class="backdrop is-hidden" data-backdrop>
 
-        <form action="" class="modal-form">
+        <form action="#" class="modal-form">
         <h2 class="modal-title"> Оставьте свои данные, мы вам перезвоним </h2>
         
           <div class="modal-form-wrapper">
-            <input type="text" name="name" id="name" class="form-input" >
-              <label for="name" class="modal-form-label">
+            <input type="text" name="name" id="name" class="form-input" placeholder=" ">
+              <label for="name" class="modal-form-label" >Имя</label>
               <svg class="icon-person-black" width="18" height="18">
                 <use href="./images/sprite.svg#person-black">
                 </use>
               </svg>
-              <span class="modal-form-label-span">Имя</span> 
-            </label>
-          </div>
+           </div>
 
           <div class="modal-form-wrapper">
-            <input type="tel" name="telefon" id="telefon" class="form-input">
+            <input type="tel" name="telefon" id="telefon" class="form-input" placeholder=" ">
             <label for="telefon" class="modal-form-label">Телефон</label>
+            <svg class="icon-person-black" width="18" height="18">
+              <use href="./images/sprite.svg#phone-black">
+              </use>
+            </svg>
           </div>
           
           <div class="modal-form-wrapper">
-            <input type="email" name="form-mail" id="form-mail" class="form-input">
+            <input type="email" name="form-mail" id="form-mail" class="form-input" placeholder=" ">
             <label for="form-mail" class="modal-form-label">Почта</label>
+            <svg class="icon-person-black" width="18" height="18">
+              <use href="./images/sprite.svg#email-black">
+              </use>
+            </svg>
           </div>
 
           <div class="modal-form-textarea-wrapper">
             <textarea name="coment" id="textarea-coment"
-            class="textarea-coment">
+            class="textarea-coment" placeholder=" ">
           </textarea>
           <label for="textarea-coment" class="modal-form-textarea-label">Комментарий</label>
           </div>
           
           <label class="modal-form-checkbox-label">
-            <input type="checkbox" name="form-chekbox" value="agreement-conditions">
-            <span>Соглашаюсь с рассылкой и принимаю 
+            <input type="checkbox" name="form-chekbox" class="chekbox-input" value="agreement-conditions">
+            <span class="chekbox-input-custom"></span>
+            <span class="chekbox-text">Соглашаюсь с рассылкой и принимаю 
               <a href="">Условия договора</a> 
             </span>
-          </label>
+         </label>
                   
         <button type="submit" class="form-submit-button button">Отправить</button>
-        <button data-close-modal class="form-close-button">
+        <button data-close-modal type="button" class="form-close-button">
           <svg class="icon-close" width="18" height="18">
             <use href="./images/sprite.svg#close-black">
             </use>
@@ -427,7 +434,6 @@
         </form>
         
       </div>
-  
 
     <!-- Футер -->
     <footer class="footer">
@@ -528,4 +534,3 @@
 
   </body>
 </html>
-

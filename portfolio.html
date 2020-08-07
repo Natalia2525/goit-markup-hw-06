@@ -275,16 +275,19 @@
             </li>
           </ul>
         </div>
-        <div>
-          <b class="subtitle">Подпишитесь на рассылку</b> <br>
-          <input class="input-mail" type="text">
-          <button type="button" class="button-title button">Подписаться
-            <svg  width="24" height="24"  >
+            <div class="">
+              <b class="subtitle"> Подпишитесь на рассылку
+              <form class="send-email">
+          <input class="email" type="email" name="mail" placeholder="E-mail"/>
+          <button type="submit" class="button-title button">
+            <span>Подписаться</span> 
+            <svg  width="24" height="24" class="send-email-svg">
               <use href="./images/sprite.svg#icon-send">
               </use>
             </svg>
           </button>
-        </div>
+        </form>
+            </div>
       </div>
     </footer>
 </body>
